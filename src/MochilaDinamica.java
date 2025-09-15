@@ -2,21 +2,23 @@ public class MochilaDinamica {
     private static int iteracoes = 0;
 
     public static void main(String[] args) {
-        // Exemplo de teste com os mesmos dados do exercício 3
+        // Caso de teste da foto
         Item[] itens = new Item[]{
-            new Item(2, 3),  // peso 2, valor 3
-            new Item(3, 4),  // peso 3, valor 4
-            new Item(4, 5),  // peso 4, valor 5
-            new Item(5, 6)   // peso 5, valor 6
+            new Item(5, 2),  // peso 5kg, valor $2
+            new Item(2, 4),  // peso 2kg, valor $4
+            new Item(2, 2),  // peso 2kg, valor $2
+            new Item(1, 3)   // peso 1kg, valor $3
         };
         
-        int capacidade = 10;
+        int capacidade = 7;  // mochila de 7kg
         
         long inicio = System.currentTimeMillis();
         int resultado = resolverMochila(itens, capacidade);
         long fim = System.currentTimeMillis();
         
-        System.out.println("Valor máximo: " + resultado);
+        System.out.println("Caso de teste da foto:");
+        System.out.println("Capacidade da mochila: " + capacidade + "kg");
+        System.out.println("Valor máximo: $" + resultado);
         System.out.println("Número de iterações: " + iteracoes);
         System.out.println("Tempo de execução: " + (fim - inicio) + "ms");
         
